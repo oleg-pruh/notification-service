@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+    <script src="/script.js"></script>
+    <title>Notification Service</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <form class="form-inline" id="sendForm">
+                    <div class="form-floating mb-3">
+                        <input type="text" id="text" class="form-control" placeholder="Text" REQUIRED>
+                        <label for="text">Message</label>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Send</button>
+                </form>
+            </div>
+
+            <div class="col-md-6">
+                <form class="form-inline" id="sendFormPrivate">
+                    <div class="form-floating mb-3">
+                        <input type="text" id="to" class="form-control" placeholder="To" REQUIRED>
+                        <label for="to">To</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" id="textPrivate" class="form-control" placeholder="Private Message" REQUIRED>
+                        <label for="textPrivate">Message</label>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Send Private</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <table id="conversation" class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>
+                            <h4>Messages</h4>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody id="messages">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
