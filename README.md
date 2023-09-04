@@ -2,7 +2,7 @@
 
 ### 🌌 Project description:
 ```
-A simple Java Spring Boot web application built in order to learn about WebSockets and STOMP
+A simple Java Spring Boot web application built with WebSockets and STOMP
 technology for real-time communication. The project explores setting up WebSocket connections,
 subscribing to channel, and sending/receiving messages in real-time between the server and clients.
 ```
